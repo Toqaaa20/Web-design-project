@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+background-image: url('fcda070c2e3202aa30e7048b6654e807.jpg'); 
+background-size: cover;
+background-position: center;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative; 
+}
+
+header {
+width: 100%;
+background-color: rgba(0, 0, 0, 0.5); 
+color: gold;
+padding: 20px;
+text-align: center;
+font-size: 24px;
+font-weight: bold;
+position: absolute; 
+top: 0; 
+left: 0; 
+z-index: 1; 
+box-sizing: border-box;
+backdrop-filter: blur(10px); 
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.title {
+margin-left: 970px; 
+}
+
+.menu {
+ margin-left: auto;
+display: flex;
+align-items: center;
+position: relative;
+}
+
+.home, .cat-paw {
+color: gold; 
+text-decoration: none; 
+}
+
+.cat-paw {
+margin-right: 10px;
+}
+
+.cat-eye-icon {
+width: 20px;
+height: 20px;
+position: absolute;
+top: 53%; 
+right: 18%;
+transform: translateY(-50%);
+cursor: pointer;
+color: #ccc; 
+background-image: url('98479.png'); 
+background-size: cover;
+}
+
+.login-box {
+background: rgba(0, 0, 0, 0.5); 
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+display: flex;
+flex-direction: column; 
+ align-items: center; 
+position: relative;
+}
+
+.login-box input, .login-box button {
+width: 80%; 
+padding: 12px; 
+margin: 10px 0; 
+ border-radius: 5px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+
+.login-box button {
+width: 30%; 
+border: none;
+background-color: gold; 
+color: black; 
+padding: 10px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.login-title {
+color: gold;
+font-weight: bold;
+}
+
+audio {
+display: none; 
+}
+
+.menu-items {
+display: none;
+flex-direction: column;
+position: absolute;
+top: 100%;
+right: 0;
+background-color: rgba(0, 0, 0, 0.5);
+border-radius: 5px;
+padding: 6px;
+width: max-content; 
+}
+
+.menu:hover .menu-items {
+            display: flex;
+}
+
+.menu-item {
+margin: 5px 0;
+}
+
+.menu-item a {
+color: gold;
+text-decoration: none;
+font-size: 16px;
+}
+
+.menu-item a:hover {
+text-decoration: underline;
+ }
+</style>
+</head>
+<body>
+<header>
+<div class="home">
+           
+<a href="file:///C:/Users/Toqa/OneDrive/Desktop/WEB/overviewpage.html" style="color: gold;"><i class="fas fa-home"></i></a>
+<a class="cat-paw" onclick="playCatSound()"><i class="fas fa-paw"></i></a>
+</div>
+<div class="title">
+EGYPTIAN CAT SHOP
+</div>
+<div class="menu">
+          
+<i class="fas fa-bars" style="color: gold;"></i>
+<div class="menu-items">
+<div class="menu-item"><a href="file:///C:/Users/Toqa/OneDrive/Desktop/WEB/Who%20we%20are.html">WHO ARE WE ?</a></div>
+<div class="menu-item"><a href="file:///C:/Users/Toqa/OneDrive/Desktop/WEB/contact%20us.html">CONTACT US <i class="fas fa-headphones-alt"></i></a></div>
+</div>
+</div>
+</header>
+<div class="login-box">
+<h2 class="login-title">LOGIN</h2>
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+<div class="cat-eye-icon" onclick="togglePasswordVisibility()"></div>
+<p><a href="file:///C:/Users/Toqa/OneDrive/Desktop/WEB/Sign%20up%20page.html" style="color: gold;">You don't have an account? SIGN UP</a></p>
+<button id="loginButton" onclick="login()">Login</button>
+</div>
+
+<audio id="myAudio">
+<source src="mixkit-cartoon-kitty-begging-meow-92 (1).mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function togglePasswordVisibility() {
+var passwordInput = document.getElementById("password");
+if (passwordInput.type === "password") {
+passwordInput.type = "text";
+} 
+else {
+passwordInput.type = "password";
+}
+}
+
+function login() {
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if (username && password) {
+window.location.href = "file:///C:/Users/Toqa/OneDrive/Desktop/WEB/after%20login.html";
+} 
+else {
+alert("Please fill all the fields.");
+}
+}
+
+function playCatSound() {
+var audio = document.getElementById("myAudio");
+audio.play();
+}
+</script>
+</body>
+</html>
+
+
+
+
+
